@@ -4,5 +4,9 @@
 
     test checkbox
   </mat-checkbox>
+  <mat-radio-group [selected]="female" (change)="onRadioChange($event)">
+    <mat-radio-button value="1" #male>male</mat-radio-button>
+    <mat-radio-button value="2" #female>female</mat-radio-button>
+  </mat-radio-group>
   <h1 class="text-dark" *ngIf="isContentShown">content</h1>
 </div>

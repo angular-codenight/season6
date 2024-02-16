@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import {MatCheckboxChange} from "@angular/material/checkbox";
+import {MatRadioChange} from "@angular/material/radio";
 
 @Component({
   selector: 'app-root',
@@ -14,5 +15,11 @@ export class AppComponent {
   onCheckBoxChange(event: MatCheckboxChange) {
     this.isContentShown=event.checked;
     console.log(event.source)
+  }
+
+  onRadioChange($event: MatRadioChange) {
+    console.log($event.value);
+    console.log($event.source)
+
   }
 }
