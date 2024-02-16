@@ -15,6 +15,7 @@ export class AppComponent {
   // selectorValue=['1'];
   selectorValue='1';
   inputValue!: string;
+  address!: any;
 
   onCheckBoxChange(event: MatCheckboxChange) {
     this.isContentShown=event.checked;
@@ -30,6 +31,7 @@ export class AppComponent {
 //   selectChange() {
 // console.log(this.selectorValue)
 //   }
+
 
 
   selectChange($event:MatSelectChange) {

@@ -36,6 +36,11 @@
     <mat-hint>enter your username</mat-hint>
     <mat-error *ngIf="usernameInput.invalid">username is required</mat-error>
   </mat-form-field>
+  <mat-form-field>
+    <textarea matInput placeholder="address" [(ngModel)]="address" required #addressInput="ngModel"></textarea>
+    <mat-hint>enter your address</mat-hint>
+    <mat-error *ngIf="addressInput.invalid">address is required</mat-error>
+  </mat-form-field>
 
   <h1 class="text-dark" *ngIf="isContentShown">content</h1>
 </div>
