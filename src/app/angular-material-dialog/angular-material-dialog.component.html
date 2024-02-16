@@ -1,8 +1,9 @@
 <h1 mat-dialog-title>angular dialog</h1>
 <mat-dialog-content>
+  <h3 class="text-success">{{data}}</h3>
   <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur corporis cumque harum incidunt iste laboriosam, nam, nesciunt nobis omnis pariatur provident quisquam repellendus sequi tempora vel vero voluptatem! Nihil, vitae!</p>
 </mat-dialog-content>
 <mat-dialog-actions>
-  <button mat-raised-button color="primary" mat-dialog-close>close</button>
-  <button mat-raised-button color="accent" mat-dialog-close>ok</button>
+  <button mat-raised-button color="primary" mat-dialog-close (click)="onCloseDialog()">close</button>
+  <button mat-raised-button color="accent" [mat-dialog-close]="'on-close-dialog'">ok</button>
 </mat-dialog-actions>

@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import {Component, Inject} from '@angular/core';
+import {MAT_DIALOG_DATA, MatDialogRef} from "@angular/material/dialog";
 
 @Component({
   selector: 'app-angular-material-dialog',
@@ -7,4 +8,11 @@ import { Component } from '@angular/core';
 })
 export class AngularMaterialDialogComponent {
 
+  constructor(@Inject(MAT_DIALOG_DATA)public data:string,private _dialogRef:MatDialogRef<AngularMaterialDialogComponent>) {
+  }
+
+  onCloseDialog() {
+    const nameArray=['ali','sajjad'];
+    this._dialogRef.close(nameArray);
+  }
 }

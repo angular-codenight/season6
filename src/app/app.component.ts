@@ -71,7 +71,10 @@ export class AppComponent {
   openDialog() {
     this._dialog.open(AngularMaterialDialogComponent,{
       maxWidth:'300px',
-      hasBackdrop:false
+      hasBackdrop:false,
+      data:'angular course'
+    }).afterClosed().subscribe((result)=>{
+      console.log(result)
     })
   }
 }
