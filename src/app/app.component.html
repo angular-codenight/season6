@@ -57,7 +57,18 @@
 <button mat-mini-fab color="accent" class="mb-3">
   <mat-icon>add</mat-icon>
 </button>
-
+<div class="text-center mb-5 mx-auto">
+  <mat-chip-set>
+    <mat-chip color="primary" [removable]="chipRemovable" (removed)="chipRemove($event)">
+      chip1
+      <mat-icon matChipRemove *ngIf="chipRemovable">close</mat-icon>
+    </mat-chip>
+    <mat-chip color="accent" highlighted>chip2</mat-chip>
+    <mat-chip color="warn">
+      chip3
+    </mat-chip>
+  </mat-chip-set>
+</div>
   <h1 class="text-dark" *ngIf="isContentShown">content</h1>
 </div>
 </div>

@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import {MatCheckboxChange} from "@angular/material/checkbox";
 import {MatRadioChange} from "@angular/material/radio";
 import {MatSelectChange} from "@angular/material/select";
+import {MatChipEvent} from "@angular/material/chips";
 
 @Component({
   selector: 'app-root',
@@ -16,7 +17,7 @@ export class AppComponent {
   selectorValue='1';
   inputValue!: string;
   address!: any;
-
+  chipRemovable=true;
   onCheckBoxChange(event: MatCheckboxChange) {
     this.isContentShown=event.checked;
     console.log(event.source)
@@ -34,8 +35,13 @@ export class AppComponent {
 
 
 
+
   selectChange($event:MatSelectChange) {
     console.log($event.value)
     console.log($event.source)
+  }
+
+  chipRemove($event:MatChipEvent){
+    console.log($event)
   }
 }
