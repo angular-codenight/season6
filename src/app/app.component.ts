@@ -4,6 +4,8 @@ import {MatRadioChange} from "@angular/material/radio";
 import {MatSelectChange} from "@angular/material/select";
 import {MatChipEditedEvent, MatChipEvent, MatChipInputEvent, MatChipListboxChange} from "@angular/material/chips";
 import {COMMA, ENTER} from "@angular/cdk/keycodes";
+import {MatDialog} from "@angular/material/dialog";
+import {AngularMaterialDialogComponent} from "./angular-material-dialog/angular-material-dialog.component";
 
 @Component({
   selector: 'app-root',
@@ -21,6 +23,10 @@ export class AppComponent {
   chipRemovable=true;
   chipList=['chip1','chip2','chip3'];
   separateKey=[ENTER,COMMA];
+
+
+  constructor(private _dialog:MatDialog) {
+  }
   onCheckBoxChange(event: MatCheckboxChange) {
     this.isContentShown=event.checked;
     console.log(event.source)
@@ -60,5 +66,12 @@ export class AppComponent {
 
   editChip($event: MatChipEditedEvent) {
     console.log($event)
+  }
+
+  openDialog() {
+    this._dialog.open(AngularMaterialDialogComponent,{
+      maxWidth:'300px',
+      hasBackdrop:false
+    })
   }
 }

@@ -81,6 +81,7 @@
     </mat-chip-grid>
     <input [matChipInputFor]="matGrid" [matChipInputSeparatorKeyCodes]="separateKey" (matChipInputTokenEnd)="add($event)">
   </mat-form-field>
+  <button mat-raised-button color="warn" (click)="openDialog()">open dialog</button>
 </div>
   <h1 class="text-dark" *ngIf="isContentShown">content</h1>
 </div>

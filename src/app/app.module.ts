@@ -14,12 +14,15 @@ import {MatInputModule} from "@angular/material/input";
 import {MatButtonModule} from "@angular/material/button";
 import {MatIconModule} from "@angular/material/icon";
 import {MatChipsModule} from "@angular/material/chips";
+import { AngularMaterialDialogComponent } from './angular-material-dialog/angular-material-dialog.component';
+import {MatDialogModule} from "@angular/material/dialog";
 
 @NgModule({
   declarations: [
     AppComponent,
     TodoListComponent,
-    TodoListItemComponent
+    TodoListItemComponent,
+    AngularMaterialDialogComponent
   ],
   imports: [
     BrowserModule,
@@ -32,7 +35,8 @@ import {MatChipsModule} from "@angular/material/chips";
     MatInputModule,
     MatButtonModule,
     MatIconModule,
-    MatChipsModule
+    MatChipsModule,
+    MatDialogModule
   ],
   providers: [],
   bootstrap: [AppComponent]
