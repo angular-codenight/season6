@@ -1,5 +1,6 @@
 <div class="container">
   <app-todo-list></app-todo-list>
+  <div class="d-flex flex-column">
   <mat-checkbox [checked]="isChecked" [value]="'test checkbox'" (change)="onCheckBoxChange($event)">
 
     test checkbox
@@ -35,6 +36,8 @@
     <input matInput placeholder="user name" [(ngModel)]="inputValue" required #usernameInput="ngModel">
     <mat-hint>enter your username</mat-hint>
     <mat-error *ngIf="usernameInput.invalid">username is required</mat-error>
+    <mat-icon matPrefix>home</mat-icon>
+    <mat-icon matSuffix>add</mat-icon>
   </mat-form-field>
   <mat-form-field>
     <textarea matInput placeholder="address" [(ngModel)]="address" required #addressInput="ngModel"></textarea>
@@ -42,5 +45,7 @@
     <mat-error *ngIf="addressInput.invalid">address is required</mat-error>
   </mat-form-field>
 
+
   <h1 class="text-dark" *ngIf="isContentShown">content</h1>
+</div>
 </div>
