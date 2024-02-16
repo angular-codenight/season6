@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import {MatCheckboxChange} from "@angular/material/checkbox";
 import {MatRadioChange} from "@angular/material/radio";
 import {MatSelectChange} from "@angular/material/select";
-import {MatChipEvent} from "@angular/material/chips";
+import {MatChipEvent, MatChipListboxChange} from "@angular/material/chips";
 
 @Component({
   selector: 'app-root',
@@ -43,5 +43,9 @@ export class AppComponent {
 
   chipRemove($event:MatChipEvent){
     console.log($event)
+  }
+
+  selectChip($event: MatChipListboxChange) {
+    console.log($event);
   }
 }

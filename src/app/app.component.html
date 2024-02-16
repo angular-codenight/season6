@@ -68,6 +68,11 @@
       chip3
     </mat-chip>
   </mat-chip-set>
+  <mat-chip-listbox multiple [selectable]="true" (change)="selectChip($event)">
+    <mat-chip-option color="accent" [selectable]="false">selectable chip 1</mat-chip-option>
+    <mat-chip-option color="warn">selectable chip 2</mat-chip-option>
+    <mat-chip-option color="primary">selectable chip 3</mat-chip-option>
+  </mat-chip-listbox>
 </div>
   <h1 class="text-dark" *ngIf="isContentShown">content</h1>
 </div>
