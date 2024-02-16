@@ -8,5 +8,28 @@
     <mat-radio-button value="1" #male>male</mat-radio-button>
     <mat-radio-button value="2" #female>female</mat-radio-button>
   </mat-radio-group>
+
+  <mat-form-field>
+<!--    multiple -->
+<!--    <mat-select [multiple]="true" [(ngModel)]="selectorValue" (ngModelChange)="selectChange()" >-->
+<!--      <mat-option value="1">option1</mat-option>-->
+<!--      <mat-option value="2">option2</mat-option>-->
+<!--      <mat-option value="3">option3</mat-option>-->
+<!--    </mat-select>-->
+
+<!--    two value binding-->
+<!--        <mat-select [(value)]="selectorValue" (selectionChange)="selectChange()" >-->
+<!--          <mat-option value="1">option1</mat-option>-->
+<!--          <mat-option value="2">option2</mat-option>-->
+<!--          <mat-option value="3">option3</mat-option>-->
+<!--        </mat-select>-->
+
+            <mat-select  (selectionChange)="selectChange($event)" >
+              <mat-option value="1">option1</mat-option>
+              <mat-option value="2">option2</mat-option>
+              <mat-option value="3">option3</mat-option>
+            </mat-select>
+  </mat-form-field>
+
   <h1 class="text-dark" *ngIf="isContentShown">content</h1>
 </div>
