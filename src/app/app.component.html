@@ -44,7 +44,19 @@
     <mat-hint>enter your address</mat-hint>
     <mat-error *ngIf="addressInput.invalid">address is required</mat-error>
   </mat-form-field>
-
+<button mat-button color="accent" class="mb-3">basic button</button>
+<button mat-flat-button color="accent" class="mb-3">flat button</button>
+<button mat-raised-button color="accent" class="mb-3">raised button</button>
+<button mat-stroked-button color="accent" class="mb-3">stroked button</button>
+<button mat-button color="accent" class="mb-3">
+<mat-icon>add</mat-icon>
+</button>
+<button mat-fab color="accent" class="mb-3">
+  <mat-icon>add</mat-icon>
+</button>
+<button mat-mini-fab color="accent" class="mb-3">
+  <mat-icon>add</mat-icon>
+</button>
 
   <h1 class="text-dark" *ngIf="isContentShown">content</h1>
 </div>
