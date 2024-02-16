@@ -2,7 +2,8 @@ import { Component } from '@angular/core';
 import {MatCheckboxChange} from "@angular/material/checkbox";
 import {MatRadioChange} from "@angular/material/radio";
 import {MatSelectChange} from "@angular/material/select";
-import {MatChipEvent, MatChipListboxChange} from "@angular/material/chips";
+import {MatChipEditedEvent, MatChipEvent, MatChipInputEvent, MatChipListboxChange} from "@angular/material/chips";
+import {COMMA, ENTER} from "@angular/cdk/keycodes";
 
 @Component({
   selector: 'app-root',
@@ -18,6 +19,8 @@ export class AppComponent {
   inputValue!: string;
   address!: any;
   chipRemovable=true;
+  chipList=['chip1','chip2','chip3'];
+  separateKey=[ENTER,COMMA];
   onCheckBoxChange(event: MatCheckboxChange) {
     this.isContentShown=event.checked;
     console.log(event.source)
@@ -47,5 +50,15 @@ export class AppComponent {
 
   selectChip($event: MatChipListboxChange) {
     console.log($event);
+  }
+
+  add($event: MatChipInputEvent) {
+     if($event.value){
+       this.chipList.push($event.value)
+     }
+  }
+
+  editChip($event: MatChipEditedEvent) {
+    console.log($event)
   }
 }

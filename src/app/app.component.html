@@ -73,6 +73,14 @@
     <mat-chip-option color="warn">selectable chip 2</mat-chip-option>
     <mat-chip-option color="primary">selectable chip 3</mat-chip-option>
   </mat-chip-listbox>
+
+  <mat-form-field class="w-100">
+    <mat-label>mat chip grid</mat-label>
+    <mat-chip-grid #matGrid>
+      <mat-chip-row [editable]="true" *ngFor="let chip of chipList" (edited)="editChip($event)">{{chip}}</mat-chip-row>
+    </mat-chip-grid>
+    <input [matChipInputFor]="matGrid" [matChipInputSeparatorKeyCodes]="separateKey" (matChipInputTokenEnd)="add($event)">
+  </mat-form-field>
 </div>
   <h1 class="text-dark" *ngIf="isContentShown">content</h1>
 </div>
