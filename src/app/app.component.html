@@ -38,55 +38,19 @@
     <mat-hint>enter your username</mat-hint>
     <mat-error *ngIf="usernameInput.invalid">username is required</mat-error>
     <mat-icon matPrefix>home</mat-icon>
-    <mat-icon matSuffix>add</mat-icon>
+    <mat-icon matSuffix>menu</mat-icon>
+<!--    <span matPrefix>prefix</span>-->
+<!--    <span matSuffix>suffix</span>-->
+
   </mat-form-field>
   <mat-form-field>
     <textarea matInput placeholder="address" [(ngModel)]="address" required #addressInput="ngModel"></textarea>
     <mat-hint>enter your address</mat-hint>
     <mat-error *ngIf="addressInput.invalid">address is required</mat-error>
   </mat-form-field>
-<button mat-button color="accent" class="mb-3">basic button</button>
-<button mat-flat-button color="accent" class="mb-3">flat button</button>
-<button mat-raised-button color="accent" class="mb-3">raised button</button>
-<button mat-stroked-button color="accent" class="mb-3">stroked button</button>
-<button mat-button color="accent" class="mb-3">
-<mat-icon>add</mat-icon>
-</button>
-<button mat-fab color="accent" class="mb-3">
-  <mat-icon>add</mat-icon>
-</button>
-<button mat-mini-fab color="accent" class="mb-3">
-  <mat-icon>add</mat-icon>
-</button>
-<div class="text-center mb-5 mx-auto">
-  <mat-chip-set>
-    <mat-chip color="primary" [removable]="chipRemovable" (removed)="chipRemove($event)">
-      chip1
-      <mat-icon matChipRemove *ngIf="chipRemovable">close</mat-icon>
-    </mat-chip>
-    <mat-chip color="accent" highlighted>chip2</mat-chip>
-    <mat-chip color="warn">
-      chip3
-    </mat-chip>
-  </mat-chip-set>
-  <mat-chip-listbox multiple [selectable]="true" (change)="selectChip($event)">
-    <mat-chip-option color="accent" [selectable]="false">selectable chip 1</mat-chip-option>
-    <mat-chip-option color="warn">selectable chip 2</mat-chip-option>
-    <mat-chip-option color="primary">selectable chip 3</mat-chip-option>
-  </mat-chip-listbox>
-
-  <mat-form-field class="w-100">
-    <mat-label>mat chip grid</mat-label>
-    <mat-chip-grid #matGrid>
-      <mat-chip-row [editable]="true" *ngFor="let chip of chipList" (edited)="editChip($event)">{{chip}}</mat-chip-row>
-    </mat-chip-grid>
-    <input [matChipInputFor]="matGrid" [matChipInputSeparatorKeyCodes]="separateKey" (matChipInputTokenEnd)="add($event)">
-  </mat-form-field>
-  <button mat-raised-button color="warn" (click)="openDialog()">open dialog</button>
-</div>
-
-    <h1>heading1</h1>
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias eaque ipsa iste libero nemo perferendis porro quae sit vel! Ducimus error eum explicabo fugiat id itaque nihil nulla, pariatur quos?</p>
 
 </div>
+
+
+
 </div>
