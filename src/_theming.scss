@@ -9,4 +9,13 @@ $my-warn:mat.define-palette(mat.$orange-palette);
 $my-theme:mat.define-light-theme($my-primary,$my-accent,$my-warn);
 //$my-theme:mat.define-light-theme((color:(primary:$my-primary,accent:$my-accent,warn:$my-warn)));
 
+
+$my-custom-typography:mat.define-typography-config(
+$font-family:'IranSans',
+$headline-1:mat.define-typography-level(112px,$font-weight:500,$letter-spacing:1)
+);
+
+
+
 @include mat.all-component-themes($my-theme);
+@include mat.typography-hierarchy($my-custom-typography)
