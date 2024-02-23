@@ -1,8 +1,9 @@
 <div class="container">
   <app-todo-list></app-todo-list>
   <div class="d-flex flex-column">
-  <mat-checkbox [checked]="isChecked" [value]="'test checkbox'" (change)="onCheckBoxChange($event)">
-
+  <mat-checkbox [checked]="isChecked"
+                [value]="'test checkbox'"
+                (change)="onCheckBoxChange($event)">
     test checkbox
   </mat-checkbox>
   <mat-radio-group [selected]="female" (change)="onRadioChange($event)">
