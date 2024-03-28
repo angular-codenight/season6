@@ -1,2 +1,2 @@
-# season5
-season 5 of angular course codenight
+# season6
+season 6 of angular course codenight
